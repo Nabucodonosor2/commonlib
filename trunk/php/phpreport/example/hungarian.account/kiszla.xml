@@ -1,0 +1,102 @@
+<Report>
+	<Font name="Arial" size="8" style="" id="ArialSmall"/>
+	<Font name="Arial" size="8" style="B" id="ArialBoldSmall"/>
+	<Font name="Arial" size="8" style="I" id="ArialItalicSmall"/>
+	<Font name="Arial" size="14" style="B" id="ArialBoldBig"/>
+	<Font name="Arial" size="10" style="B" id="ArialBold"/>
+	<Font name="Arial" size="10" style="" id="Arial"/>
+	<PageHeader>
+		<Cell text="{nyomat}" align="R" border="LTR" newline="1" font="ArialSmall"/>
+		<Cell text="{strSzamla}" align="C" border="LR" newline="1" font="ArialBoldBig"/>
+		<Cell text="{peldany}" align="R" border="LBR" newline="1" font="ArialSmall"/>
+		<Cell text="{strSzallito}" width="50%" height="-0" border="LR" font="ArialBold"/>
+		<Cell text="{strVevo}" width="50%" border="R" newline="1"/>
+		<Cell text="{sNev}" width="50%" border="LR" font="Arial"/>
+		<Cell text="{vNev}" width="50%" border="R" newline="1"/>
+		<Cell text="{sCim}" width="50%" border="LR" font="Arial"/>
+		<Cell text="{vCim}" width="50%" border="R" newline="1"/>
+		<Cell text="{sAdosz}" width="50%" border="LR" font="Arial"/>
+		<Cell text="{vAdosz}" width="50%" border="R" newline="1"/>
+		<Cell text="Bank szsz:{sbszsz}" width="50%"  border="LRB"/>
+		<Cell text="Bank szsz:{vbszsz}" width="50%"  border="RB" newline="1"/>
+		
+		<Cell text="{strFizmod}" width="20%" border="LR" align="C" font="ArialBold"/>
+		<Cell text="{strKelt}" width="20%" align="C" border="R"/>
+		<Cell text="{strTelj}" width="20%" align="C" border="R"/>
+		<Cell text="{strHatido}" width="20%" align="C" border="R"/>
+		<Cell text="{strSzlasz}" width="20%" align="C" border="R" newline="1"/>
+		<Cell text="{Fizmod}" width="20%" border="LRB" align="C" font="Arial"/>
+		<Cell text="{Kelt}" width="20%" align="C" border="RB"/>
+		<Cell text="{Telj}" width="20%" align="C" border="RB"/>
+		<Cell text="{Hatido}" width="20%" align="C" border="RB"/>
+		<Cell text="{Szlasz}" width="20%" align="C" border="RB" newline="1"/>
+		
+		<Cell text="{strKshkod}" width="9%" border="LBRT" align="C" font="ArialBoldSmall"/>
+		<Cell text="{strMegn}" width="25%" border="RB" align="C"/>
+		<Cell text="{strMennyegys}" width="6%" border="RB" align="C"/>
+		<Cell text="{strMenny}" width="10%" border="RB" align="C"/>
+		<Cell text="{strEgysar}" width="10%" border="RB" align="C"/>
+		<Cell text="{strNettoossz}" width="10%" border="RB" align="C"/>
+		<Cell text="{strAFA}" width="10%" border="RB" align="C"/>
+		<Cell text="{strAFAtart}" width="10%" border="RB" align="C"/>
+		<Cell text="{strBruttoossz}" width="10%" border="RB" align="C" newline="1"/>
+	</PageHeader>
+	<Content font="ArialSmall">
+		<Cell text="{Kshkod}" width="9%" border="LBRT" align="R"/>
+		<Cell text="{Megn}" width="25%" border="LBRT"/>
+		<Cell text="{Mennyegys}" width="6%" border="LBRT" align="C"/>
+		<Cell text="{Menny}" width="10%" border="LBRT" align="R" format="N2, "/>
+		<Cell text="{Egysar}" width="10%" border="LBRT" align="R" format="N2, "/>
+		<Cell text="{Nettoossz}" width="10%" border="LBRT" align="R" format="N0, "/>
+		<Cell text="{AFA}" width="10%" border="LBRT" align="R" format="N0, "/>
+		<Cell text="{AFAtart}" width="10%" border="LBRT" align="R" format="N0, "/>
+		<Cell text="{Bruttoossz}" width="10%" border="LBRT" align="R" newline="1" format="N0, "/>
+	</Content>
+	<PageFooter>
+		<Cell text="{SectionPageNumber}/{snb} oldal" align="C" absY="-15" border="T" font="ArialItalicSmall"/>
+		<Cell text="{strCopywrite}" align="R" absY="-15"/>
+	</PageFooter>
+	<ReportFooter>
+		<Cell text="{strAfasz}" width="10%" border="B" align="C" font="ArialBoldSmall"/>
+		<Cell text="{strAdoalap}" width="13%" border="B" align="C"/>
+		<Cell text="{strAFA}" width="13%" border="B" align="C"/>
+		<Cell text="{strBrutto}" width="13%" border="B" align="C" newline="1"/>
+
+		<Cell text="{afasz0}" width="10%" align="R" font="ArialSmall"/>
+		<Cell text="{adoalap0}" width="13%" align="R" format="N0, "/>
+		<Cell text="{afa0}" width="13%" align="R" format="N0, "/>
+		<Cell text="{brutto0}" width="13%" align="R" format="N0, "/>
+		<Cell text="" width="21%"/>
+		<Cell text="{strSzamlaertek}" width="15%" font="ArialSmall"/>
+		<Cell text="{Szamlaertek}" width="15%" align="R" font="Arial" newline="1" format="N0, "/>
+
+		<Cell text="{afasz1}" width="10%" align="R" font="ArialSmall"/>
+		<Cell text="{adoalap1}" width="13%" align="R" format="N0, "/>
+		<Cell text="{afa1}" width="13%" align="R" format="N0, "/>
+		<Cell text="{brutto1}" width="13%" align="R" format="N0, "/>
+		<Cell text="" width="21%"/>
+		<Cell text="{strAFA}" width="15%" font="ArialSmall"/>
+		<Cell text="{afa}" width="15%" align="R" font="Arial" newline="1" format="N0, "/>
+
+		<Cell text="{afasz2}" width="10%" align="R" font="ArialSmall"/>
+		<Cell text="{adoalap2}" width="13%" align="R" format="N0, "/>
+		<Cell text="{afa2}" width="13%" align="R" format="N0, "/>
+		<Cell text="{brutto2}" width="13%" align="R" format="N0, "/>
+		<Cell text="" width="21%"/>
+		<Cell text="{strFizetendo}" width="15%" font="ArialBoldSmall"/>
+		<Cell text="{Fizetendo}" width="15%" align="R" font="ArialBold" newline="1" format="N0, "/>
+
+		<Cell text="azaz {BruttoSzoveg} Forint" align="R" font="ArialSmall" newline="1" border="T"/>
+
+		<Cell text="{SzlaMegjegyzesek}" border="TBLR" newline="1"/>
+
+		<Cell text="{strAtvevo}" width="10%"/>
+		<Cell text=".............................................................." width="30%" align="C"/>
+		<Cell text="" width="20%"/>
+		<Cell text="{strKiallito}" width="10%"/>
+		<Cell text="\n\n..............................................................\n{keszito}" width="30%" align="C" newline="1"/>
+
+		<Cell text="{strSzlaveg}" newline="1" align="C"/>
+
+	</ReportFooter>
+</Report>
