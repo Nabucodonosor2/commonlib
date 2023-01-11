@@ -53,7 +53,7 @@ class menu extends base {
 				if ($enable)
 					$script .= 'it='.$parent.'.addItemWithImages(9,10,10," &nbsp; &nbsp;'.$menu[$i]->name.'",n,n,"",7,7,7,3,3,3,n,n,n,"'.$menu[$i]->link.'",n,n,n,"'.$menu[$i]->link.'",n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,10,n);';
 				else
-					$script .= 'it='.$parent.'.addItemWithImages(14,15,15," &nbsp; &nbsp;'.$menu[$i]->name.'",n,n,"",7,7,7,3,3,3,n,n,n,"",n,n,n,n,n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,n,n);';
+					$script .= 'it='.$parent.'.addItemWithImages(14,15,15," &nbsp; &nbsp;",n,n,"",7,7,7,3,3,3,n,n,n,"",n,n,n,n,n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,n,n);';
 			}
 			if (count($menu[$i]->children)) {
 				$script .= 'var s'.($nivel+1).'=it.addSubmenu(0,0,-1,0,0,0,0,8,0,1,0,n,n,100,0,4,0,-1,1,200,200,0,0,"0,0,0",0,"0",1);';
