@@ -50,8 +50,12 @@ class menu extends base {
 			else if (count($menu[$i]->children))
 				$script .= 'it=s1.addItemWithImages(9,10,10," &nbsp; &nbsp;'.$menu[$i]->name.'",n,n,"",7,7,7,3,3,3,8,8,8,"#",n,n,n,"#",n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,n,n);';
 			else {
+				//MH 13/01/2023: Se hace este cambio para que algunos usuarios no puedan ver el nombre de la opcion deshabilitada
+				// Como tambien ciertos usuarios de biggi puedan visualizarlo de todas formas pero en disable
 				if ($enable)
 					$script .= 'it='.$parent.'.addItemWithImages(9,10,10," &nbsp; &nbsp;'.$menu[$i]->name.'",n,n,"",7,7,7,3,3,3,n,n,n,"'.$menu[$i]->link.'",n,n,n,"'.$menu[$i]->link.'",n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,10,n);';
+				else if($enable == false && ($cod_usuario == 1 || $cod_usuario == 2 || $cod_usuario == 4 || $cod_usuario == 71 || $cod_usuario == 40 || $cod_usuario == 32))
+					$script .= 'it='.$parent.'.addItemWithImages(14,15,15," &nbsp; &nbsp;'.$menu[$i]->name.'",n,n,"",7,7,7,3,3,3,n,n,n,"",n,n,n,n,n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,n,n);';
 				else
 					$script .= 'it='.$parent.'.addItemWithImages(14,15,15," &nbsp; &nbsp;",n,n,"",7,7,7,3,3,3,n,n,n,"",n,n,n,n,n,0,0,2,11,12,12,13,14,14,1,1,1,0,0,n,n,n,0,0,0,n,n);';
 			}
