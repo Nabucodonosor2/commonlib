@@ -204,7 +204,7 @@ class database{
 				$this->con=call_user_func($this->db_connect,$this->host,$this->user,$this->password);
 				// MS SQL Server
 			}else if($this->database_type=="sqlsrv" || $this->database_type=="mssql"){
-				$connectionInfo = array("Database"=>$this->database,"UID"=>$this->user,"PWD"=>$this->password, "TrustServerCertificate"=>"yes");
+				$connectionInfo = array("Database"=>$this->database,"UID"=>$this->user,"PWD"=>$this->password, "TrustServerCertificate"=>"yes", "CharacterSet"=>"UTF-8");
 				//$connectionInfo = array("Database"=>$this->database,"UID"=>$this->user,"PWD"=>$this->password);
 				$this->con = call_user_func($this->db_connect,$this->host,$connectionInfo);
 			}else if($this->database_type=="oci"){
