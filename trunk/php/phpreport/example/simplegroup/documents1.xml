@@ -1,0 +1,60 @@
+<Report>
+	<Font name="Arial" size="8" style="" id="ArialSmall"/>
+	<Font name="Arial" size="8" style="B" id="ArialBoldSmall"/>
+	<Font name="Arial" size="8" style="I" id="ArialItalicSmall"/>
+	<Font name="Arial" size="14" style="B" id="ArialBoldBig"/>
+	<Font name="Arial" size="10" style="B" id="ArialBold"/>
+	<Font name="Arial" size="10" style="" id="Arial"/>
+	<PageHeader>
+		<Cell text="{strPos}" width="5%" border="LRTB" align="C" font="ArialBold"/>
+		<Cell text="{strName}" width="50%" align="C" border="RTB"/>
+		<Cell text="{strQuantity}" width="15%" align="C" border="RTB"/>
+		<Cell text="{strCost}" width="15%" align="C" border="RTB"/>
+		<Cell text="{strPrice}" width="15%" align="C" border="RTB" newline="1"/>
+	</PageHeader>
+	<Content>
+		<Cell text="{pos}" width="5%" align="R" font="Arial"/>
+		<Cell text="{name}" width="50%" />
+		<Cell text="{quantity}" width="15%" align="R"/>
+		<Cell text="{cost}" width="15%" align="R"/>
+		<Cell text="{price}" width="15%" newline="1" align="R"/>
+	</Content>
+	<PageFooter>
+		<Cell text="Page {SectionPageNumber}/{snb}" align="C" absY="-15" border="T" font="ArialItalicSmall"/>
+		<Cell text="{strCopyright}" align="R" absY="-15"/>
+	</PageFooter>
+	<ReportHeader>
+		<Cell text="{strSumTitle}" border="TLRB" align="C" newline="1" font="ArialBoldBig"/>
+	</ReportHeader>
+	<ReportFooter>
+		<Cell text=""  newline="1" font="Arial"/>
+		<Cell text="" width="40%"/>
+		<Cell text="{strManager}" width="20%"/>
+		<Cell text="\n\n..............................................................\n{Manager}" width="40%" align="C" newline="1"/>
+	</ReportFooter>
+	<Group>
+		<Variable name="summary" function="SUM" value="price"/>
+		<Variable name="prices" function="GROUP" key="name" GroupFunction="SUM" values="quantity,price"/>
+		<GroupFooter>
+			<Cell text="" width="5%" border="T" font="ArialBoldBig" IndentFix="after"/>
+			<CellGroup name="prices" font="Arial">
+				<CellG text="{$key}" width="33.33%"/>
+				<CellG text="{$key::quantity}" width="33.33%" align="R" format="N0, " />
+				<CellG text="{$key::price}" width="33.34%" align="R" format="N0, " newline="1"/>
+			</CellGroup>
+			<Cell text="" width="66.66%" font="ArialBoldBig" />
+			<Cell text="{summary}" width="33.34%" border="T" align="R" format="N0, " newline="1" IndentRelease="after"/>
+		</GroupFooter>
+	</Group>
+	<Group local="documentid">
+		<Variable name="docid" value="documentid"/>
+		<Variable name="gsummary" function="SUM" value="price"/>
+		<GroupHeader>
+			<Cell text="{strDocumentGroup}{docid}" border="B" width="55%" font="ArialBold" newline="1"/>
+		</GroupHeader>
+		<GroupFooter>
+			<Cell text="{strDocSummary}" width="85%" border="TB" font="ArialBold"/>
+			<Cell text="{gsummary}" width="15%" border="TB" align="R" newline="1"/>
+		</GroupFooter>
+	</Group>
+</Report>
